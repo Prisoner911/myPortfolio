@@ -1,0 +1,25 @@
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;  /* Vertical scrollbar width */
+    height: 10px; /* Horizontal scrollbar height */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: rgb(61, 48, 48);  /* Match your div's background */
+    border-radius: 0px;
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+    border: none;
+    background: linear-gradient(to bottom, #15c9e9, rgb(190, 19, 19), #15c9e9);
+    box-shadow: 0px 0px 10px 10px #15c9e9;
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #1aa3bb, rgb(190, 19, 19), #1aa3bb);
+    box-shadow: 0px 0px 15px 15px #1aa3bb;
+}

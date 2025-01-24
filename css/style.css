@@ -1,0 +1,799 @@
+
+    body{
+        margin: 0px;
+        overflow-x: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .scrollableContainer{
+        overflow-y: visible;
+    }
+    
+    .MainContainer{
+        position: sticky;
+        background-image: url('/assets/hd_portfolio_image.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+       overflow: hidden;
+       top: 0;
+       z-index: 1;
+       opacity: 1;
+       transition: opacity 0.3s ease-out;
+    }
+
+    @keyframes zoomIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+    
+    .centeringDiv{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+    }
+    
+    .backgroundImageDiv{
+        background-image: url('/assets/hd_portfolio_image.jpg');
+        height: 100%;
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        animation: zoomIn 0.5s forwards ease-in-out;
+        background-position: center;
+    }
+    
+    .innerBannerContainer{
+        display: flex;
+        float: right;
+        margin-right: 18rem;
+        margin-top: 3rem;
+    }
+    
+    .introDiv{
+        margin-top: 8rem;
+    }
+    
+    /* .backFilter{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.233));
+        width: 100vw;
+        height: 100vh;
+    }
+     */
+    
+    .name{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 7em;
+        font-weight: bold;
+        color: rgb(48, 6, 61);
+        margin-bottom: 0rem;
+        text-align: left;
+        opacity: 0;
+        animation: slideLeft forwards 0.8s;
+        animation-delay: 0.5s;
+        text-shadow: 
+        0 0 5px rgb(235, 233, 235), 
+        0 0 10px rgb(255, 255, 255), 
+        0 0 20px rgb(247, 229, 247), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(255, 255, 247), 
+        0 0 50px rgb(255, 255, 255), 
+        0 0 75px rgb(255, 255, 255);
+    }
+    .intro{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(11, 22, 88);
+        margin-top: 0rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        animation: slideRight forwards 0.8s;
+        animation-delay: 1s;
+        opacity: 0;
+        text-shadow: 
+        0 0 5px rgb(235, 233, 235), 
+        0 0 10px rgb(255, 255, 255), 
+        0 0 20px rgb(247, 229, 247), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(255, 255, 247), 
+        0 0 50px rgb(255, 255, 255), 
+        0 0 75px rgb(255, 255, 255);
+    }
+    
+    @keyframes slideLeft {
+        from{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideRight {
+        from{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
+
+    .Content{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 2; /* This will ensure Content stays on top of MainContainer */
+        background-color: black;
+        color: rgb(255, 255, 255);
+        height: max-content;
+        margin-bottom: 0rem;
+        padding: 0rem;
+        overflow: hidden;
+    }
+
+    .IntroPage{
+        background-color: black;
+        height: 100vh;
+
+    }
+
+    .myIntro{
+        margin-top: 2rem;
+
+    }
+
+    .titleIntro {
+        text-align: center;
+        opacity: 0; /* Invisible initially */
+        transition: opacity 1s ease-in; /* Optional for smooth change before animation */
+        margin-bottom: 0;
+        font-size: 4em;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    
+    .titleIntro.animate {
+        animation: fadeIn forwards 1s ease-in-out; /* Start animation when class is added */
+        text-shadow: 
+        0 0 5px rgba(235, 233, 235, 0.452), 
+        0 0 10px rgba(255, 255, 255, 0.329), 
+        0 0 20px rgba(247, 229, 247, 0.466), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgba(255, 255, 247, 0.363), 
+        0 0 50px rgba(255, 255, 255, 0.514), 
+        0 0 75px rgba(255, 255, 255, 0.192);
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .hrClass{
+        margin: 0 auto;
+        width: 0rem;
+        opacity: 0;
+        height: 2px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+    }
+
+
+
+    .hrClass.extendHr{
+        animation: extendHr 0.8s forwards ease-in-out;
+        box-shadow: 0px 1px 15px 2px white;
+    }
+
+
+    @keyframes extendHr {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 18rem;
+            opacity: 1;
+        }
+    }
+
+
+    .introContent{
+        display: flex;
+        justify-content: center;
+      
+    
+    }
+
+    .textContent{
+        width: 70vw;
+       
+        /* border: 1px solid wheat; */
+        padding: 2rem;
+        border-radius: 2rem;
+        margin-top: 2rem;
+        opacity: 0; /* Initially hidden */
+        height: 100%;
+   
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    .textContent.fadeInText{
+        animation: appearFromMiddle 1s forwards ease-in-out; /* Animation setup */
+    }
+
+    /* Keyframes for the appear effect */
+    @keyframes appearFromMiddle {
+        from {
+            opacity: 0;
+           
+        }
+        to {
+            opacity: 1;
+           
+        }
+    }
+
+    .textContent p{
+        font-size: 1.3em;
+    }
+
+    .anecdoteTitle{
+        font-size: 2em;
+    }
+
+    .linkClass{
+        color: rgb(164, 173, 255);
+    }
+
+    .servicesDiv{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 3; /* Higher than Content */
+        background-color: rgb(0, 0, 0); /* For visibility */
+        margin-top: 10rem;
+        height: 100vh;
+        padding-top: 1rem;
+  
+    }
+
+
+
+    .serviceTitle{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 3.8em;
+        color: rgb(255, 255, 255);
+        opacity: 0; /* Invisible initially */
+        transition: opacity 1s ease-in; /* Optional for smooth change before animation */
+    }
+    
+    .serviceTitle.animateServiceTitle {
+        animation: fadeIn forwards 1s ease-in-out; /* Start animation when class is added */
+    }
+
+    .hrClass2{
+        margin: 0 auto;
+        width: 0rem;
+        opacity: 0;
+        height: 2px;
+        border: none;
+        background-color: black;
+    }
+    @keyframes extendHr2 {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 20rem;
+            opacity: 1;
+        }
+    }
+
+    .hrClass2.extendHr2{
+        animation: extendHr2 0.8s forwards ease-in-out;
+        box-shadow: 0px 1px 15px 2px rgb(0, 0, 0);
+    }
+
+
+    .serviceLogo{
+        width: 8vw;
+        transform: scale(1);
+        transition: transform 0.3s;
+    }
+
+    .sketchBook{
+        width: 15vw;
+    }
+    
+
+    .serviceLogo:hover{
+        transform: scale(1.2);
+        transition: transform 0.3s;
+    }
+
+    .serviceTableDiv{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        height: max-content;
+        width: max-content;
+        position: relative;
+        opacity: 0;
+    }
+
+    .serviceTableDiv.appearServiceTableDiv{
+        animation: fadeIn 1s forwards ease-in-out;
+        animation-delay: 0.5s;
+    }
+
+    .serviceTableDiv::after, .serviceTableDiv::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 102%;
+        width: 101.5%;
+        z-index: -1;
+        translate: -50% -50%;
+        background-image: conic-gradient(from var(--angle), #001aff, #ff0000, #001aff);
+        border-radius: 1rem;
+        animation: spin 3s linear infinite;
+    }
+
+    .serviceTableDiv::before{
+        filter: blur(2rem);
+        opacity: 0.8;
+    }
+
+    .serviceGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 1fr)); /* Responsive grid layout */
+        gap: 20px; /* Space between grid items */
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        padding: 20px; /* Add padding around the grid */
+        background-color: rgb(221, 221, 221); /* Optional background for the grid */
+        border-radius: 10px; /* Optional border radius */
+        height: 70vh;
+        opacity: 0;
+        overflow-y: scroll;
+    }
+
+    .serviceGrid.animateServiceTitle {
+        animation: fadeIn forwards 1s ease-in-out; /* Start animation when class is added */
+    }
+
+
+    .projectCardsDiv{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 3; 
+        background-color: rgb(0, 0, 0); /* For visibility */
+        margin-top: 10rem;
+        height: 100vh;
+        padding-top: 1rem;
+        color: white;
+    }
+
+
+
+
+    .projectCardContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        opacity: 0;
+        width: max-content;
+        height: max-content;
+        position: relative;
+    }
+
+    .centeringDiv2{
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .projectCardContainer::after, .projectCardContainer::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 101.5%;
+        width: 101%;
+        z-index: -1;
+        translate: -50% -50%;
+        background-image: conic-gradient(from var(--angle), #1628c7, #b91010, #1628c7);
+        border-radius: 1rem;
+        animation: spin 3s linear infinite;
+    }
+
+    .projectCardContainer::before{
+        filter: blur(2rem);
+        opacity: 0.8;
+    }
+
+    .projectCardContainer.animateProjectCardContainer{
+        animation: fadeIn forwards 1s ease-in-out; /* Start animation when class is added */
+    }
+
+    .ProjectCard {
+        margin-top: 0rem;
+        background: linear-gradient(to bottom, #646264, #090947);
+        color: rgb(255, 255, 255);
+        text-align: left;
+        padding: 1rem;
+        border-radius: 1rem;
+        height: 50vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transition: transform 0.3s;
+        width: 18rem;  
+    }
+
+    .ProjectCard:hover{
+        transform: scale(1.05);
+        /* box-shadow: 0px 0px 25px 2px rgb(179, 138, 233); */
+        background: linear-gradient(to bottom, #9b5e9b, #19197e);
+        transition: transform 0.3s;
+    }
+
+    .card1{
+        opacity: 0;
+        transform: translateX(105%);
+        z-index: 1;
+    }
+
+    .card1.animateProjectCard1{
+        animation: slideLeft forwards 0.5s ease-in-out 1s;
+        transition: opacity 0.5s;
+    }
+
+    .card2{
+        transform: scale(1);
+        z-index: 2;
+    }
+
+    .card2.animateProjectCard2{
+        animation: cardPopUp forwards 1.2s ease-in-out 0.8s;
+        transition: opacity 0.5s;
+    }
+
+    .card3{
+        opacity: 0;
+        transform: translateX(-105%);
+        z-index: 1;
+    }
+
+    .card3.animateProjectCard3{
+        animation: slideRight forwards 0.5s ease-in-out 1.3s;
+        transition: opacity 0.5s;
+    }
+
+    @keyframes slideLeft {
+        from{
+            transform: translateX(105%);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        to{
+            transform: translateX(0%);
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+    }
+
+    @keyframes cardPopUp {
+        0%,100%{
+            transform: scale(1);
+            transition: transform 0.5s;
+        }
+        30%,50%,80%{
+            transform: scale(1.05);
+            transition: transform 0.5s;
+            box-shadow: 0px 0px 25px 2px black;
+
+        }
+    }
+
+    @keyframes slideRight {
+        from{
+            transform: translateX(-105%);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        to{
+            transform: translateX(0%);
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+    }
+
+
+
+    .cardImgDiv{
+        display: flex;
+        justify-content: center;
+    }
+    .card_img{
+        width: 8vw;
+    }
+
+    .cardBody{
+        margin-top: 1rem;
+    }
+
+    .card_title{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .projectCardInnerContainer{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Responsive grid layout */
+        gap: 20px; /* Space between grid items */
+        justify-items: center; /* Center items horizontally */
+        padding: 20px; /* Add padding around the grid */
+        background-color: #5a5a5a; /* Optional background for the grid */
+        border-radius: 10px; /* Optional border radius */
+        height: 70vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+
+
+    
+
+    .linkDiv{
+        height: max-content;
+        background-color: transparent;
+        border-radius: 1.5rem;
+    }
+
+    .outerCardDiv{
+        height: 54vh;
+        width: 19.5rem;
+        /* background-color: red; */
+        border-radius: 1rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    @property --angle{
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
+    @keyframes spin {
+        from{
+            --angle: 0deg;
+        }
+        to{
+            --angle: 360deg;
+        }
+    }
+
+    .outerCardDiv:hover::after, .outerCardDiv:hover::before{
+        content: '';
+        position: absolute;
+        /* background: red; */
+        background-image: conic-gradient(from var(--angle), rgb(115, 25, 250), rgb(255, 51, 180), rgb(255, 126, 41), rgb(115, 25, 250));
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        /* z-index: -1; */
+        border-radius: 1rem;
+        transition: 0.3s;
+        animation: spin 3s linear infinite;
+    }
+
+    .outerCardDiv:hover::before{
+        filter: blur(2rem);
+        opacity: 0.5;
+    }
+
+    .outerCardDiv1{
+        opacity: 0;
+        transform: translateX(105%);
+    }
+    .outerCardDiv2{
+        opacity: 0;
+    }
+    .outerCardDiv3{
+        opacity: 0;
+        transform: translateX(-105%);
+    }
+
+    .outerCardDiv1.animateOuterCard1{
+        animation: slideLeft forwards 0.5s ease-in-out 1s;
+        transition: opacity 0.5s;
+    }
+
+    .outerCardDiv2.animateOuterCard2{
+        animation: fadeIn forwards 1.2s ease-in-out 0.8s;
+        transition: opacity 0.5s;
+    }
+
+    .outerCardDiv3.animateOuterCard3{
+        animation: slideRight 0.5s forwards ease-in-out 1.3s;
+        transition: opacity 0.5s;
+    }
+
+ 
+
+    .linkDiv a{
+        /* display: block; */
+        text-decoration: none;
+        color: black;
+    }
+
+    .hrClass3{
+        margin: 0 auto;
+        width: 0rem;
+        opacity: 0;
+        height: 2px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+    }
+    @keyframes extendHr3 {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 20rem;
+            opacity: 1;
+        }
+    }
+
+    .hrClass3.extendHr3{
+        animation: extendHr3 0.8s forwards ease-in-out;
+        box-shadow: 0px 1px 15px 2px rgb(255, 255, 255);
+    }
+
+    .footerDiv{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 4; /* Higher than Content */
+        background-color: rgb(0, 0, 0); /* For visibility */
+        margin-top: 10rem;
+        height: 100vh;
+        padding-top: 1rem;
+        color: rgb(255, 255, 255);
+    }
+
+    .hrClass4{
+        margin: 0 auto;
+        width: 0rem;
+        opacity: 1;
+        height: 2px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+    }
+    @keyframes extendHr4 {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 28rem;
+            opacity: 1;
+        }
+    }
+
+    .hrClass4.extendHr4{
+        animation: extendHr4 0.8s forwards ease-in-out;
+        box-shadow: 0px 1px 15px 2px rgb(0, 0, 0);
+    }
+
+    .contactContainer{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        height: max-content;
+        align-items: center;
+    }
+
+    .backgroundContactDiv{
+        background-color: rgb(39, 39, 39);
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        border-radius: 1rem;
+        position: relative;
+    }
+
+    .backgroundContactDiv::after, .backgroundContactDiv::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 101.5%;
+        width: 101%;
+        translate: -50% -50%;
+        z-index: -1;
+        background-image: conic-gradient(from var(--angle), #78b7fa, #796767, #78b7fa);
+        border-radius: 1rem;
+        animation: spin 3s linear infinite;
+    }
+
+    .backgroundContactDiv::before{
+        filter: blur(2rem);
+        opacity: 0.8;
+    }
+
+    .contactInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        overflow: hidden;
+        width: 65%;
+    }
+    
+    .slider {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: transform 0.1s linear; /* Smooth transition */
+    }
+    
+    .slider span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*70deg)) translateZ(300px);
+    }
+    
+    .slider span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      
+    }
+    
+    .slider span:hover img {
+        transform: translateY(-10%);
+    }
+    
+
+ 
+  
