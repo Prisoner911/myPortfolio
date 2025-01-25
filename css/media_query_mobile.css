@@ -1,0 +1,499 @@
+/* Base styles remain the same */
+
+/* Responsive Design for Mobile*/
+@media screen and (max-width: 640px) and (orientation: portrait) {
+    body{
+        margin: 0px;
+        overflow-x: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .scrollableContainer{
+        overflow-y: visible;
+    }
+    
+    .MainContainer{
+        position: sticky;
+        background-image: url('../assets/hd_background_mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+       overflow: hidden;
+       top: 0;
+       z-index: 1;
+       opacity: 1;
+       transition: opacity 0.3s ease-out;
+       overflow-y: none;
+    }
+
+    @keyframes zoomIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+
+
+    
+    .centeringDiv{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(0px);
+    }
+    
+    .backgroundImageDiv{
+        background: none;
+        width: none;
+        height: none;
+    }
+
+    .innerBannerContainer{
+        display: flex;
+        float: right;
+        margin-right: 0rem;
+        padding: 1rem;
+        margin-top: 100%;
+    }
+    
+    .introDiv{
+        margin-top: 8rem;
+    }
+
+    .name{
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        color: rgb(120, 209, 190);
+        font-size: 3em;
+        margin-bottom: 0rem;
+        text-align: left;
+        opacity: 0;
+        animation: slideLeft forwards 0.8s;
+        animation-delay: 0.5s;
+        text-shadow: 
+        0 0 5px rgb(0, 0, 0), 
+        0 0 10px rgb(0, 0, 0), 
+        0 0 20px rgb(116, 116, 116), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(0, 0, 0), 
+        0 0 50px rgb(0, 0, 0), 
+        0 0 75px rgb(0, 0, 0);
+    }
+
+    .intro{
+        font-family:"Roboto Slab", serif;
+        font-weight: bold;
+        color: rgb(120, 209, 190);
+        font-size: 1.5em;
+        margin-top: 0rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        animation: slideRight forwards 0.8s;
+        animation-delay: 1s;
+        opacity: 0;
+        text-shadow: 
+        0 0 5px rgb(0, 0, 0), 
+        0 0 10px rgb(0, 0, 0), 
+        0 0 20px rgb(116, 116, 116), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(0, 0, 0), 
+        0 0 50px rgb(0, 0, 0), 
+        0 0 75px rgb(0, 0, 0);
+    }
+
+
+    .Content{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 2; /* This will ensure Content stays on top of MainContainer */
+        background-color: black;
+        color: rgb(255, 255, 255);
+        height: max-content;
+        margin-bottom: 0rem;
+        padding: 0rem;
+        overflow: hidden;
+    }
+
+    .titleIntro {
+        text-align: center;
+        opacity: 0; /* Invisible initially */
+        transition: opacity 1s ease-in; /* Optional for smooth change before animation */
+        margin-bottom: 0;
+        font-size: 2em;
+        font-family: "Roboto Slab", serif;
+    }
+
+    .titleIntro.animate {
+        animation: fadeIn forwards 1s ease-in-out; /* Start animation when class is added */
+        text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.452), 
+        0 0 10px rgba(0, 0, 0, 0.329), 
+        0 0 20px rgba(255, 255, 255, 0.466), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgba(255, 255, 255, 0.363), 
+        0 0 50px rgba(0, 0, 0, 0.514), 
+        0 0 75px rgba(0, 0, 0, 0.192);
+    }
+    
+
+
+
+
+
+    @keyframes extendHr {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 10rem;
+            opacity: 1;
+        }
+    }
+
+    .textContent{
+        width: 100vw;
+       
+        /* border: 1px solid wheat; */
+        padding: 1rem;
+       
+        border-radius: 2rem;
+        margin-top: 1rem;
+        opacity: 0; /* Initially hidden */
+        height: 100%;
+        
+        overflow: hidden; /* Prevent overflow */
+    }
+    .textContent p{
+        font-size: 1.1em;
+        font-family: "EB Garamond", serif;
+    }
+
+    .anecdoteTitle{
+        font-size: 1.5em;
+        font-family: "EB Garamond", serif;
+
+    }
+
+    .servicesDiv{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 3; /* Higher than Content */
+        background-color: rgb(0, 0, 0); /* For visibility */
+        margin-top: 0rem;
+        height: 100vh;
+        padding-top: 1rem;
+  
+    }
+
+    .serviceTitle{
+        text-align: center;
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+        opacity: 0; /* Invisible initially */
+        transition: opacity 1s ease-in; /* Optional for smooth change before animation */
+    }
+
+    @keyframes extendHr2 {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 13rem;
+            opacity: 1;
+        }
+    }
+
+    .serviceTableDiv{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        height: max-content;
+        width: max-content;
+        position: relative;
+        opacity: 0;
+    }
+
+    .serviceTableDiv::after, .serviceTableDiv::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 102%;
+        width: 102%;
+        z-index: -1;
+        translate: -50% -50%;
+        background-image: conic-gradient(from var(--angle), #001aff, #ff0000, #001aff);
+        border-radius: 1rem;
+        animation: none !important;
+    }
+
+    .serviceTableDiv::before{
+        filter: blur(2rem);
+        opacity: 0.5;
+    }
+
+    .serviceGrid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Responsive grid layout */
+        gap: 10px; /* Space between grid items */
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        padding: 20px; /* Add padding around the grid */
+        background-color: rgb(221, 221, 221); /* Optional background for the grid */
+        border-radius: 10px; /* Optional border radius */
+        height: 70vh;
+        opacity: 0;
+        overflow-y: auto;
+    }
+
+    
+
+
+    .serviceLogo{
+        width: 15vw;
+        transform: scale(1);
+        transition: transform 0.3s;
+    }
+
+
+    .sketchBook, .java, .mysql, .figma, .fireBase{
+        width: 25vw;
+    }
+    
+
+    .serviceLogo:hover{
+        transform: scale(1.2);
+        transition: transform 0.3s;
+    }
+
+    .projectCardsDiv{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 3; 
+        background-color: rgb(0, 0, 0); /* For visibility */
+        margin-top: 0rem;
+        height: 100vh;
+        padding-top: 1rem;
+        color: white;
+    }
+
+    @keyframes extendHr3 {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 13rem;
+            opacity: 1;
+        }
+    }
+
+
+    .projectCardInnerContainer{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(100px, 1fr)); /* Responsive grid layout */
+        gap: 20px; /* Space between grid items */
+        justify-items: center; /* Center items horizontally */
+        padding: 10px 2px; /* Add padding around the grid */
+        background-color: #5a5a5a; /* Optional background for the grid */
+        border-radius: 10px; /* Optional border radius */
+        height: 60vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+    .card_img{
+        width: 28vw;
+    }
+
+
+    .card1{
+        opacity: 1;
+        transform: translateX(0%);
+        z-index: 1;
+    }
+
+    .card1.animateProjectCard1{
+        animation: none;
+        transition: opacity 0.5s;
+    }
+
+    .card2{
+        transform: scale(1);
+        z-index: 2;
+    }
+
+    .card2.animateProjectCard2{
+        animation: none;
+        transition: opacity 0.5s;
+    }
+
+    .card3{
+        opacity: 1;
+        transform: translateX(0%);
+        z-index: 1;
+    }
+
+    .card3.animateProjectCard3{
+        animation: none;
+        transition: opacity 0.5s;
+    }
+
+    .outerCardDiv1{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    .outerCardDiv2{
+        opacity: 1;
+    }
+    .outerCardDiv3{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .outerCardDiv1.animateOuterCard1{
+        animation: none;
+        transition: opacity 0.5s;
+    }
+
+    .outerCardDiv2.animateOuterCard2{
+        animation: none;
+        transition: opacity 0.5s;
+    }
+
+    .outerCardDiv3.animateOuterCard3{
+        animation: none;
+        transition: opacity 0.5s;
+    }
+
+    .outerCardDiv:hover::after, .outerCardDiv:hover::before{
+        content: '';
+        position: absolute;
+        /* background: red; */
+        background-image: conic-gradient(from var(--angle), rgb(115, 25, 250), rgb(255, 51, 180), rgb(255, 126, 41), rgb(115, 25, 250));
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        /* z-index: -1; */
+        border-radius: 1rem;
+        transition: 0.3s;
+        animation: none !important;
+    }
+
+    .projectCardContainer::after, .projectCardContainer::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 101.5%;
+        width: 103%;
+        z-index: -1;
+        translate: -50% -50%;
+        background-image: conic-gradient(from var(--angle), #1628c7, #b91010, #1628c7);
+        border-radius: 1rem;
+        animation: none !important;
+    }
+
+
+
+
+    .contactInfo{
+        display: none;
+    }
+
+    .contactTable{
+        display: block !important;
+    }
+
+    .contactTable table{
+        width: max-content;
+    }
+
+    .contactTable tr,td{
+        padding: 1rem;
+    }
+
+    .contactTable img{
+        width: 10vw;
+        border-radius: 10px;
+    }
+
+    .backgroundContactDiv{
+        background-color: rgb(39, 39, 39);
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    .backgroundContactDiv::after, .backgroundContactDiv::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 101.5%;
+        width: 101%;
+        translate: -50% -50%;
+        z-index: -1;
+        background-image: conic-gradient(from var(--angle), #78b7fa, #ff0000, #78b7fa);
+        border-radius: 1rem;
+        animation: none !important;
+    }
+
+    .backgroundContactDiv::before, .projectCardContainer::before, .outerCardDiv:hover::before{
+        filter: blur(0.3rem);
+        opacity: 0.5;
+    }
+
+    @keyframes extendHr4 {
+        from {
+            width: 0rem;
+            opacity: 0;
+        }
+        to{
+            width: 17rem;
+            opacity: 1;
+        }
+    }
+
+
+
+}
+
+/* Extra Small Devices (Phones, Portrait Mode) */
+/* @media screen and (max-width: 576px) {
+
+} */
+
+/* Landscape Mode Adjustments */
+/* @media screen and (max-width: 480px) and (orientation: landscape) {
+    .MainContainer, .backgroundImageDiv {
+        height: 80vh;
+    }
+
+    .name {
+        font-size: 3.5em;
+    }
+
+    .serviceGrid, .projectCardInnerContainer {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .serviceLogo {
+        width: 10vw;
+    }
+} */

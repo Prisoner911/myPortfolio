@@ -70,7 +70,7 @@
      */
     
     .name{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: "Roboto Slab", serif;
         font-size: 7em;
         font-weight: bold;
         color: rgb(48, 6, 61);
@@ -89,7 +89,7 @@
         0 0 75px rgb(255, 255, 255);
     }
     .intro{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: "Roboto Slab", serif;
         font-size: 2em;
         font-weight: bold;
         color: rgb(11, 22, 88);
@@ -161,7 +161,7 @@
         transition: opacity 1s ease-in; /* Optional for smooth change before animation */
         margin-bottom: 0;
         font-size: 4em;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Roboto Slab", serif;
     }
 
     
@@ -190,7 +190,7 @@
         margin: 0 auto;
         width: 0rem;
         opacity: 0;
-        height: 2px;
+        height: 3px;
         border: none;
         background-color: rgb(255, 255, 255);
     }
@@ -209,7 +209,7 @@
             opacity: 0;
         }
         to{
-            width: 18rem;
+            width: 20rem;
             opacity: 1;
         }
     }
@@ -278,7 +278,7 @@
 
     .serviceTitle{
         text-align: center;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Roboto Slab", serif;
         font-weight: bold;
         font-size: 3.8em;
         color: rgb(255, 255, 255);
@@ -294,9 +294,9 @@
         margin: 0 auto;
         width: 0rem;
         opacity: 0;
-        height: 2px;
+        height: 3px;
         border: none;
-        background-color: black;
+        background-color: rgb(255, 255, 255);
     }
     @keyframes extendHr2 {
         from {
@@ -304,14 +304,14 @@
             opacity: 0;
         }
         to{
-            width: 20rem;
+            width: 24rem;
             opacity: 1;
         }
     }
 
     .hrClass2.extendHr2{
         animation: extendHr2 0.8s forwards ease-in-out;
-        box-shadow: 0px 1px 15px 2px rgb(0, 0, 0);
+        box-shadow: 0px 1px 15px 2px rgb(255, 255, 255);
     }
 
 
@@ -444,7 +444,7 @@
         text-align: left;
         padding: 1rem;
         border-radius: 1rem;
-        height: 50vh;
+        height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
         transition: transform 0.3s;
@@ -573,7 +573,7 @@
     }
 
     .outerCardDiv{
-        height: 54vh;
+        height: max-content;
         width: 19.5rem;
         /* background-color: red; */
         border-radius: 1rem;
@@ -604,8 +604,8 @@
         position: absolute;
         /* background: red; */
         background-image: conic-gradient(from var(--angle), rgb(115, 25, 250), rgb(255, 51, 180), rgb(255, 126, 41), rgb(115, 25, 250));
-        height: 100%;
-        width: 100%;
+        height: 107%;
+        width: 99%;
         top: 50%;
         left: 50%;
         translate: -50% -50%;
@@ -659,7 +659,7 @@
         margin: 0 auto;
         width: 0rem;
         opacity: 0;
-        height: 2px;
+        height: 3px;
         border: none;
         background-color: rgb(255, 255, 255);
     }
@@ -669,7 +669,7 @@
             opacity: 0;
         }
         to{
-            width: 20rem;
+            width: 24rem;
             opacity: 1;
         }
     }
@@ -694,9 +694,9 @@
         margin: 0 auto;
         width: 0rem;
         opacity: 1;
-        height: 2px;
+        height: 3px;
         border: none;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
     }
     @keyframes extendHr4 {
         from {
@@ -704,14 +704,14 @@
             opacity: 0;
         }
         to{
-            width: 28rem;
+            width: 30rem;
             opacity: 1;
         }
     }
 
     .hrClass4.extendHr4{
         animation: extendHr4 0.8s forwards ease-in-out;
-        box-shadow: 0px 1px 15px 2px rgb(0, 0, 0);
+        box-shadow: 0px 1px 15px 2px rgb(255, 255, 255);
     }
 
     .contactContainer{
@@ -762,8 +762,8 @@
     
     .slider {
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         transform-style: preserve-3d;
         transition: transform 0.1s linear; /* Smooth transition */
     }
@@ -776,7 +776,7 @@
         height: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
-        transform: rotateY(calc(var(--i)*70deg)) translateZ(300px);
+        transform: rotateY(calc(var(--i)*70deg)) translateZ(250px);
     }
     
     .slider span img {
@@ -793,6 +793,11 @@
     .slider span:hover img {
         transform: translateY(-10%);
     }
+
+    .contactTable{
+        display: none !important;
+    }
+
     
 
  

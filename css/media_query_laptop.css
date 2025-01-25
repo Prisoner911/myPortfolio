@@ -73,7 +73,7 @@ and (max-width: 1605px)
      */
     
     .name{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: "Roboto Slab", serif;
         font-size: 5em;
         font-weight: bold;
         color: rgb(48, 6, 61);
@@ -92,7 +92,7 @@ and (max-width: 1605px)
         0 0 75px rgb(255, 255, 255);
     }
     .intro{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family:"Roboto Slab", serif;
         font-size: 2em;
         font-weight: bold;
         color: rgb(11, 22, 88);
@@ -164,7 +164,7 @@ and (max-width: 1605px)
         transition: opacity 1s ease-in; /* Optional for smooth change before animation */
         margin-bottom: 0;
         font-size: 4em;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Roboto Slab", serif;
     }
 
     
@@ -212,7 +212,7 @@ and (max-width: 1605px)
             opacity: 0;
         }
         to{
-            width: 18rem;
+            width: 20rem;
             opacity: 1;
         }
     }
@@ -281,7 +281,7 @@ and (max-width: 1605px)
 
     .serviceTitle{
         text-align: center;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Roboto Slab", serif;
         font-weight: bold;
         font-size: 3.8em;
         color: rgb(255, 255, 255);
@@ -299,7 +299,7 @@ and (max-width: 1605px)
         opacity: 0;
         height: 2px;
         border: none;
-        background-color: black;
+        background-color: rgb(255, 255, 255);
     }
     @keyframes extendHr2 {
         from {
@@ -307,14 +307,14 @@ and (max-width: 1605px)
             opacity: 0;
         }
         to{
-            width: 20rem;
+            width: 24rem;
             opacity: 1;
         }
     }
 
     .hrClass2.extendHr2{
         animation: extendHr2 0.8s forwards ease-in-out;
-        box-shadow: 0px 1px 15px 2px rgb(0, 0, 0);
+        box-shadow: 0px 1px 15px 2px rgb(255, 255, 255);
     }
 
 
@@ -672,7 +672,7 @@ and (max-width: 1605px)
             opacity: 0;
         }
         to{
-            width: 20rem;
+            width: 25rem;
             opacity: 1;
         }
     }
@@ -699,7 +699,7 @@ and (max-width: 1605px)
         opacity: 1;
         height: 2px;
         border: none;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
     }
     @keyframes extendHr4 {
         from {
@@ -707,14 +707,14 @@ and (max-width: 1605px)
             opacity: 0;
         }
         to{
-            width: 28rem;
+            width: 31rem;
             opacity: 1;
         }
     }
 
     .hrClass4.extendHr4{
         animation: extendHr4 0.8s forwards ease-in-out;
-        box-shadow: 0px 1px 15px 2px rgb(0, 0, 0);
+        box-shadow: 0px 1px 15px 2px rgb(255, 255, 255);
     }
 
     .contactContainer{
@@ -765,8 +765,8 @@ and (max-width: 1605px)
     
     .slider {
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         transform-style: preserve-3d;
         transition: transform 0.1s linear; /* Smooth transition */
     }
@@ -779,10 +779,13 @@ and (max-width: 1605px)
         height: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
-        transform: rotateY(calc(var(--i)*70deg)) translateZ(300px);
+        transform: rotateY(calc(var(--i)*70deg)) translateZ(200px);
     }
+
     
-    .slider span img {
+
+    .slider span img{
+       
         position: absolute;
         top: 0;
         left: 0;
@@ -790,12 +793,19 @@ and (max-width: 1605px)
         height: 100%;
         object-fit: cover;
         transition: transform 0.5s;
-      
+          
+        
     }
     
     .slider span:hover img {
         transform: translateY(-10%);
     }
+
+    .contactTable{
+        display: none !important;
+    }
+
+
     
 
  } 

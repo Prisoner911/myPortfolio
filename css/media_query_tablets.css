@@ -1,0 +1,249 @@
+ /* Styles for tablets and larger devices */
+@media screen and (min-width: 769px) and (orientation: portrait) {
+    body{
+        margin: 0px;
+        overflow-x: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .scrollableContainer{
+      overflow-y: visible;
+    }
+    
+    .MainContainer{
+        position: sticky;
+        background-image: url('../assets/hd_background_mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+       overflow: hidden;
+       top: 0;
+       z-index: 1;
+       opacity: 1;
+       transition: opacity 0.3s ease-out;
+       overflow-y: none;
+    }
+
+    @keyframes zoomIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+    
+    .centeringDiv{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(0px);
+    }
+    
+    .backgroundImageDiv{
+        background: none;
+        width: none;
+        height: none;
+    }
+
+    .innerBannerContainer{
+        display: flex;
+        float: right;
+        margin-right: 10rem;
+        padding: 2rem;
+        margin-top: 80%;
+    }
+    
+    .introDiv{
+        margin-top: 8rem;
+    }
+
+    .name{
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        font-size: 7em;
+        color: rgb(120, 209, 190);
+        margin-bottom: 0rem;
+        text-align: left;
+        opacity: 0;
+        animation: slideLeft forwards 0.8s;
+        animation-delay: 0.5s;
+        text-shadow: 
+        0 0 5px rgb(0, 0, 0), 
+        0 0 10px rgb(0, 0, 0), 
+        0 0 20px rgb(116, 116, 116), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(0, 0, 0), 
+        0 0 50px rgb(0, 0, 0), 
+        0 0 75px rgb(0, 0, 0);
+    }
+
+    .intro{
+        font-family:"Roboto Slab", serif;
+        font-weight: bold;
+        font-size: 3em;
+        color: rgb(120, 209, 190);
+        margin-top: 0rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        animation: slideRight forwards 0.8s;
+        animation-delay: 1s;
+        opacity: 0;
+        text-shadow: 
+        0 0 5px rgb(0, 0, 0), 
+        0 0 10px rgb(0, 0, 0), 
+        0 0 20px rgb(116, 116, 116), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(0, 0, 0), 
+        0 0 50px rgb(0, 0, 0), 
+        0 0 75px rgb(0, 0, 0);
+    }
+}
+
+
+/* small tablets*/
+@media screen and (min-width: 641px) and (max-width: 768px)  and (orientation: portrait) {
+    body{
+        margin: 0px;
+        overflow-x: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .scrollableContainer{
+        overflow-y: visible;
+    }
+    
+    .MainContainer{
+        position: sticky;
+        background-image: url('../assets/hd_background_mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+       overflow: hidden;
+       top: 0;
+       z-index: 1;
+       opacity: 1;
+       transition: opacity 0.3s ease-out;
+       overflow-y: none;
+    }
+
+    @keyframes zoomIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+    
+    .centeringDiv{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(0px);
+    }
+    
+    .backgroundImageDiv{
+        background: none;
+        width: none;
+        height: none;
+    }
+
+    .innerBannerContainer{
+        display: flex;
+        float: right;
+        margin-right: 10rem;
+        padding: 2rem;
+        margin-top: 80%;
+    }
+    
+    .introDiv{
+        margin-top: 8rem;
+    }
+
+    .name{
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        font-size: 5em;
+        color: rgb(120, 209, 190);
+        margin-bottom: 0rem;
+        text-align: left;
+        opacity: 0;
+        animation: slideLeft forwards 0.8s;
+        animation-delay: 0.5s;
+        text-shadow: 
+        0 0 5px rgb(0, 0, 0), 
+        0 0 10px rgb(0, 0, 0), 
+        0 0 20px rgb(116, 116, 116), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(0, 0, 0), 
+        0 0 50px rgb(0, 0, 0), 
+        0 0 75px rgb(0, 0, 0);
+    }
+
+    .intro{
+        font-family:"Roboto Slab", serif;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgb(120, 209, 190);
+        margin-top: 0rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        animation: slideRight forwards 0.8s;
+        animation-delay: 1s;
+        opacity: 0;
+        text-shadow: 
+        0 0 5px rgb(0, 0, 0), 
+        0 0 10px rgb(0, 0, 0), 
+        0 0 20px rgb(116, 116, 116), 
+        0 0 30px rgb(0, 0, 0), 
+        0 0 40px rgb(0, 0, 0), 
+        0 0 50px rgb(0, 0, 0), 
+        0 0 75px rgb(0, 0, 0);
+    }
+
+
+    .Content{
+        position: sticky;
+        top: 0; /* Ensures it sticks when scrolling */
+        z-index: 2; /* This will ensure Content stays on top of MainContainer */
+        background-color: black;
+        color: rgb(255, 255, 255);
+        height: max-content;
+        margin-bottom: 0rem;
+        padding: 0rem;
+        overflow: hidden;
+        margin-top: 10rem;
+    }
+
+
+
+}
+
+/* Extra Small Devices (Phones, Portrait Mode) */
+
+
+/* Landscape Mode Adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .MainContainer, .backgroundImageDiv {
+        height: 80vh;
+    }
+
+    .name {
+        font-size: 3.5em;
+    }
+
+    .serviceGrid, .projectCardInnerContainer {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .serviceLogo {
+        width: 10vw;
+    }
+}

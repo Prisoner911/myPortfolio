@@ -1,373 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
+    // Common Intersection Observer function
     const observer = new IntersectionObserver(
         (entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animate');
+                    entry.target.classList.add(entry.target.dataset.animate); 
                     observer.unobserve(entry.target); // Stop observing after triggering animation
                 }
             });
         },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
+        { threshold: 0.1 } // Trigger when 10% of the element is visible
     );
 
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.titleIntro');
-    elements.forEach((el) => observer.observe(el));
-});
+    // Define elements and their respective animation classes
+    const elementsToObserve = [
+        { selector: '.titleIntro', className: 'animate' },
+        { selector: '.hrClass', className: 'extendHr' },
+        { selector: '.textContent', className: 'fadeInText' },
+        { selector: '.hrClass2', className: 'extendHr2' },
+        { selector: '.serviceTitle', className: 'animateServiceTitle' },
+        { selector: '.serviceTableDiv', className: 'appearServiceTableDiv' },
+        { selector: '.serviceGrid', className: 'animateServiceTitle' },
+        { selector: '.hrClass3', className: 'extendHr3' },
+        { selector: '.projectCardContainer', className: 'animateProjectCardContainer' },
+        { selector: '.hrClass4', className: 'extendHr4' }
+    ];
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'extendHr' class when the element becomes visible
-                    entry.target.classList.add('extendHr');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
+    // Iterate over each element type, add a dataset attribute, and observe it
+    elementsToObserve.forEach(({ selector, className }) => {
+        document.querySelectorAll(selector).forEach((el) => {
+            el.dataset.animate = className;
+            observer.observe(el);
+        });
+    });
+
+    // Additional animations only for larger screens
+    if (!window.matchMedia("(max-width: 640px) and (orientation: portrait)").matches) {
+        const additionalElements = [
+            { selector: '.card1', className: 'animateProjectCard1' },
+            { selector: '.card2', className: 'animateProjectCard2' },
+            { selector: '.card3', className: 'animateProjectCard3' },
+            { selector: '.outerCardDiv1', className: 'animateOuterCard1' },
+            { selector: '.outerCardDiv2', className: 'animateOuterCard2' },
+            { selector: '.outerCardDiv3', className: 'animateOuterCard3' }
+        ];
+
+        additionalElements.forEach(({ selector, className }) => {
+            document.querySelectorAll(selector).forEach((el) => {
+                el.dataset.animate = className;
+                observer.observe(el);
             });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.hrClass');
-    elements.forEach((el) => observer.observe(el));
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    
-                    entry.target.classList.add('fadeInText');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.textContent');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'extendHr' class when the element becomes visible
-                    entry.target.classList.add('extendHr2');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.hrClass2');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateServiceTitle');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.serviceTitle');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('appearServiceTableDiv');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.serviceTableDiv');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateServiceTitle');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.serviceGrid');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'extendHr' class when the element becomes visible
-                    entry.target.classList.add('extendHr3');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.hrClass3');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateProjectCardContainer');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.projectCardContainer');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateProjectCard1');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.card1');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateProjectCard2');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.card2');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateProjectCard3');
-                    
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.card3');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateOuterCard1');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.outerCardDiv1');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateOuterCard2');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.outerCardDiv2');
-    elements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'animate' class when the element becomes visible
-                    entry.target.classList.add('animateOuterCard3');
-                    
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.outerCardDiv3');
-    elements.forEach((el) => observer.observe(el));
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Add the 'extendHr' class when the element becomes visible
-                    entry.target.classList.add('extendHr4');
-                    observer.unobserve(entry.target); // Stop observing after triggering animation
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
-
-    // Select all elements with the class '.titleIntro'
-    const elements = document.querySelectorAll('.hrClass4');
-    elements.forEach((el) => observer.observe(el));
+        });
+    }
 });
