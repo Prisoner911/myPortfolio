@@ -14,7 +14,7 @@ and (max-width: 1605px)
     
     .MainContainer{
         position: sticky;
-        background-image: url('../assets/portfolio_image.jpg');
+        background-image: url('../assets/portfolio_image.webp');
         background-repeat: no-repeat;
         background-size: 100%;
         width: 100vw;
@@ -45,7 +45,7 @@ and (max-width: 1605px)
     }
     
     .backgroundImageDiv{
-        background-image: url('../assets/hd_portfolio_image.jpg');
+        background-image: url('../assets/hd_portfolio_image.webp');
         height: 100%;
         width: 90%;
         background-repeat: no-repeat;

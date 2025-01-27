@@ -14,7 +14,7 @@
     
     .MainContainer{
         position: sticky;
-        background-image: url('../assets/hd_background_mobile.jpg');
+        background-image: url('../assets/hd_background_mobile.webp');
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
