@@ -233,7 +233,7 @@
         translate: -50% -50%;
         background-image: conic-gradient(from var(--angle), #001aff, #ff0000, #001aff);
         border-radius: 1rem;
-        animation: none !important;
+        animation: spin 3s linear infinite;
     }
 
     .serviceTableDiv::before{
@@ -306,7 +306,7 @@
         padding: 10px 2px; /* Add padding around the grid */
         background-color: #5a5a5a; /* Optional background for the grid */
         border-radius: 10px; /* Optional border radius */
-        height: 60vh;
+        height: 80vh;
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -403,7 +403,7 @@
         translate: -50% -50%;
         background-image: conic-gradient(from var(--angle), #1628c7, #b91010, #1628c7);
         border-radius: 1rem;
-        animation: none !important;
+        animation: spin 3s linear infinite;
     }
 
 
@@ -469,6 +469,92 @@
             opacity: 1;
         }
     }
+
+    .contactTable{
+        display: none !important;
+    }
+
+    
+    .contactContainer{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        height: max-content;
+        align-items: center;
+    }
+
+    .backgroundContactDiv{
+        background-color: rgb(39, 39, 39);
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        border-radius: 1rem;
+        position: relative;
+    }
+
+    .backgroundContactDiv::after, .backgroundContactDiv::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 101.5%;
+        width: 101%;
+        translate: -50% -50%;
+        z-index: -1;
+        background-image: conic-gradient(from var(--angle), #78b7fa, #796767, #78b7fa);
+        border-radius: 1rem;
+        animation: spin 3s linear infinite;
+    }
+
+    .backgroundContactDiv::before{
+        filter: blur(2rem);
+        opacity: 0.8;
+    }
+
+    .contactInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .slider {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform-style: preserve-3d;
+        transition: transform 0.1s linear; /* Smooth transition */
+    }
+    
+    .slider span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*70deg)) translateZ(150px);
+    }
+    
+    .slider span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      
+    }
+    
+    .slider span:hover img {
+        transform: translateY(-10%);
+    }
+
 
 
 

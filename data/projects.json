@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Eve Planner - Event Manager",
+        "description": "A website to book an event as a customer. A website to manage the events and customers as an agent.",
+        "image": "assets/evePlannerLogo.png",
+        "link": "https://drive.google.com/file/d/16jXnp6-ztqel2Yv7XOVkjYrlikjzzMPN/view?usp=drive_link"
+    },
+    {
+        "title": "Inventory Management for a wine store",
+        "description": "A website which helps in managing the inventory of a wine store. For more information click me.",
+        "image": "assets/logo3.png",
+        "link": "outOfOrder.html"
+    },
+    {
+        "title": "Camper's Haven E-Commerce App",
+        "description": "An E-Commerce app which let's you buy all your camping related needs. For more information click me.",
+        "image": "assets/logo.png",
+        "link": "https://drive.google.com/file/d/1Ef0Di5Fj3-x6j2LD4F39LFTcKap4k4wK/view?usp=sharing"
+    },
+    {
+        "title": "Lost and Found System",
+        "description": "A web application made to make the reporting and claiming of lost items easier. For more information click me.",
+        "image": "assets/lost_and_found.png",
+        "link": "https://docs.google.com/document/d/1FTtZuZu6X8CFySIT8zMBIB5t6A_Ogl2A/edit?usp=drive_link&ouid=104208405485062209908&rtpof=true&sd=true"
+
+    }
+    
+]
